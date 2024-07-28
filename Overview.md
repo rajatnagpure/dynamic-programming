@@ -225,7 +225,32 @@ Dynamic Programming on Grids involves solving problems on grid structures, such 
                   dp[i][j] = grid[i][j] + min(dp[i-1][j], dp[i][j-1]);
           ```
 
-10. **Others**
+10. **Stock**
+Dynamic Programming on Stock problems involves solving problems related to stock trading to maximize profit under given constraints.
+
+    - **Top-Down (Memoization)**
+        - **Function Signature**: `int maxProfit(int[] prices, int n)`
+        - **Base Case**: `if (n <= 1) return 0;`
+        - **Recursion Call**:
+          ```python
+          if (prices[n-1] > prices[n-2])
+              return max(prices[n-1] - prices[n-2] + maxProfit(prices, n-2), maxProfit(prices, n-1));
+          else
+              return maxProfit(prices, n-1);
+          ```
+    - **Bottom-Up (Tabulation)**
+        - **Dimensions**: `dp[n]`
+        - **Base Case**: Initialize `dp[i] = 0` for all `i`.
+        - **Iteration Call**:
+          ```python
+          for i in range(1, n):
+              for j in range(0, i):
+                  if (prices[i] > prices[j])
+                      dp[i] = max(dp[i], prices[i] - prices[j] + dp[j]);
+          ```
+
+
+11. **Others**
 This section includes various other dynamic programming problems.
 
     - **Top-Down (Memoization)**
