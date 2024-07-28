@@ -13,6 +13,9 @@ Below are the different types of Dynamic Programming questions. For each type, w
 9. **DP on Grid** ... 14
 10. **Others** ... 5
 
+
+--------------
+
 1. **0-1 Knapsack**
 The 0-1 Knapsack problem involves selecting items with given weights and values to maximize the total value without exceeding a given weight capacity. Each item can be included or excluded.
 
